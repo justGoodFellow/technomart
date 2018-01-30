@@ -1,0 +1,361 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title
+      | Техномарт
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/style.min.css')
+  body
+    header.page-header
+      .page-header__top
+        .page-header__top-wrap
+          a.logo.page-header__logo(href='index.html')
+            | Техномарт
+          .page-header__top-menu.header-menu
+            .header-menu__item.header-menu__item--search.search-field
+              .search-field__icon-wrap
+                svg(width='17', height='17')
+                  use(xlink:href='img/symbols.svg#icon-search')
+              input(placeholder='Поиск')
+            a.header-menu__item.header-menu__item--bookmarks(href='#')
+              | Закладки:
+              |
+              span
+                | 0
+            a.header-menu__item.header-menu__item--cart.header-menu__item-cart--active(href='#')
+              | Корзина:
+              |
+              span
+                | 10
+            a.header-menu__item.header-menu__item--order(href='#')
+              | Оформить заказ
+      .page-header__middle
+        .page-header__middle-wrap
+          p.page-header__description
+            | Интернет-магазин строительных материалов и инструментов для ремонта
+          address.page-header__contacts
+            a(href='tel:+78125550555')
+              | +7 (812) 555-05-55
+            p.page-header__contacts-addr
+              | г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          .page-header__user.user
+            a.user__link.user__link--logged(href='#')
+              svg(width='20', height='18')
+                use(xlink:href='img/symbols.svg#icon-user')
+              | Равшан Джамшутович
+              svg(width='20', height='17')
+                use(xlink:href='img/symbols.svg#icon-login')
+            ul.user__menu
+              li.user__menu-item
+                a.user__menu-link(href='#')
+                  | Мои заказы
+              li.user__menu-item
+                a.user__menu-link(href='#')
+                  | Личный кабинет
+        nav.main-nav
+          ul.main-nav__items
+            li.main-nav__item
+              a.main-nav__link(href='index.html')
+                | Главная
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Компания
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Каталог
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Новости
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Спецпредложения
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Доставка
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+    section.catalog
+      .catalog__header
+        .catalog__header-wrap
+          nav.catalog__nav.page-nav
+            ul.page-nav__list
+              li.page-nav__item
+                a.page-nav__link(href='index.html')
+                  | Главная
+              li.page-nav__item
+                a.page-nav__link(href='#')
+                  | Каталог
+              li.page-nav__item
+                a.page-nav__link(href='#')
+                  | Инструмент
+              li.page-nav__item
+                a.page-nav__link
+                  | Перфораторы
+          h1.catalog__title
+            | Перфораторы
+      .catalog__wrapper
+        form.catalog__filters
+          h4.catalog__filter-type
+            | Фильтр:
+          fieldset.catalog__filters-group
+            legend
+              h3.catalog__filters-title.catalog__legend
+                | Цена:
+            .catalog__filters-cost.range-filter
+              .range-filter__range-controls
+                .range-filter__scale
+                  .range-filter__bar(style='width: 70%;')
+                  .range-filter__toggle.range-filter__min-toggle
+                  .range-filter__toggle.range-filter__max-toggle
+              .range-filter__price-controls
+                .range-filter__min-price
+                  label(for='from')
+                    | От
+                  input(id='from', type='text', value='0')
+                .range-filter__max-price
+                  label(for='to')
+                    | До
+                  input(id='to', type='text', value='30000')
+          fieldset.catalog__filters-group
+            legend
+              h3.catalog__filters-title.catalog__legend
+                | Производители:
+            div
+              .checkbox
+                input.checkbox__input(type='checkbox', id='bosch', checked)
+                label.catalog__filters-selection.checkbox__label(for='bosch')
+                  | Bosch
+              .checkbox
+                input.checkbox__input(type='checkbox', id='interskol')
+                label.catalog__filters-selection.checkbox__label(for='interskol')
+                  | Интрескол
+              .checkbox
+                input.checkbox__input(type='checkbox', id='makita', checked)
+                label.catalog__filters-selection.checkbox__label(for='makita')
+                  | Makita
+              .checkbox
+                input.checkbox__input(type='checkbox', id='dewalt')
+                label.catalog__filters-selection.checkbox__label(for='dewalt')
+                  | Dewalt
+              .checkbox
+                input.checkbox__input(type='checkbox', id='hitachi')
+                label.catalog__filters-selection.checkbox__label(for='hitachi')
+                  | Hitachi
+          fieldset.catalog__filters-group
+            legend
+              h3.catalog__filters-title.catalog__legend
+                | Питание:
+            div
+              .radiobox
+                input.radiobox__input(type='radio', id='cordless', name='power', checked)
+                label.catalog__filters-selection.radiobox__label(for='cordless')
+                  | Аккумуляторные
+              .radiobox
+                input.radiobox__input(type='radio', id='сorded', name='power')
+                label.catalog__filters-selection.radiobox__label(for='сorded')
+                  | Сетевые
+          button.catalog__filters-btn.btn(type='submit')
+            | Показать
+        .catalog__content
+          .catalog__sort
+            h4.catalog__filter-type
+              | Сортировка:
+            ul.catalog__sort-items
+              li.catalog__sort-item.catalog__sort-item--active
+                button.catalog__sort-btn(type='button', disabled)
+                  | По цене
+              li.catalog__sort-item
+                button.catalog__sort-btn(type='button')
+                  | По типу
+              li.catalog__sort-item
+                button.catalog__sort-btn(type='button')
+                  | По функционалу
+              li.catalog__sort-item.catalog__sort-item--active
+                button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--down(type='button', disabled)
+                  | Прямой порядок
+              li.catalog__sort-item
+                button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--up(type='button')
+                  | Обратный порядок
+          .catalog__items
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 3000
+                span.product__discount
+                  | 22500 Р.
+                span.product__price
+                  | 15500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-3.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 6000
+                span.product__discount
+                  | 30500 Р.
+                span.product__price
+                  | 25500 Р.
+            .catalog__item.product
+              span.product__flag-new
+                | Новинка
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 2000
+                span.product__price
+                  | 12500 Р.
+            .catalog__item.product
+              span.product__flag-new
+                | Новинка
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 3000
+                span.product__discount
+                  | 22500 Р.
+                span.product__price
+                  | 15500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-3.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 6000
+                span.product__discount
+                  | 30500 Р.
+                span.product__price
+                  | 25500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 2000
+                span.product__price
+                  | 12500 Р.
+            .catalog__item.product
+              span.product__flag-new
+                | Новинка
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 3000
+                span.product__discount
+                  | 22500 Р.
+                span.product__price
+                  | 15500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-3.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 6000
+                span.product__discount
+                  | 30500 Р.
+                span.product__price
+                  | 25500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a(href='#')
+                  h3.product__title
+                    | Перфоратор BOSCH BFG 2000
+                span.product__price
+                  | 12500 Р.
+          .catalog__nav
+            ul.catalog__nav-items
+              li.catalog__nav-item.catalog__nav-item--active
+                button.catalog__nav-btn.btn(type='button', disabled)
+                  | 1
+              li.catalog__nav-item
+                button.catalog__nav-btn.btn(type='button')
+                  | 2
+              li.catalog__nav-item
+                button.catalog__nav-btn.btn(type='button')
+                  | 3
+            button.catalog__nav-next.btn(type='button')
+              | Следующая
+      section.catalog__info
+        .catalog__info-wrapper
+          h2.catalog__info-title
+            | Пара слов о перфораторах
+          p.catalog__info-description
+            | Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+      .catalog__cart-popup.cart-popup.modal
+      .cart-popup__inner
+        span.cart-popup__desc
+          | Товар добавлен в корзину!
+      .cart-popup__inner
+        .cart-popup__buttons
+          a.cart-popup__btn.btn(href='#')
+            | Оформить заказ
+          a.cart-popup__btn.btn(href='#')
+            | Продолжить покупки
+      button.modal__close(type='button')
+        | Закрыть
+      .modal__overlay
+
+    include layouts/footer.pug
+    script(src='js/concatenated.js')
