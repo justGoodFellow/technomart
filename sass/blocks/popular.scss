@@ -1,0 +1,50 @@
+.popular__wrapper {
+  @include container;
+}
+
+.popular__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 25px;
+  padding-left: 30px;
+
+  background-color: $red--light;
+}
+
+.popular__title {
+  font-size: 30px;
+  color: $color-main--light;
+  text-transform: uppercase;
+}
+
+.popular__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popular__item {
+  box-sizing: border-box;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  border: 1px solid $gray;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
+
+  img {
+    display: block;
+  }
+}

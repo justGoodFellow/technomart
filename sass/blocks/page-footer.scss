@@ -1,0 +1,160 @@
+.page-footer__top {
+  padding-bottom: 10px;
+
+  color: white;
+
+  background-color: $color-main--light;
+}
+
+.page-footer__top-wrap {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__top-left-col {
+  width: 390px;
+}
+
+.page-footer__address {
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.page-footer__address-phone {
+  display: block;
+
+  color: white;
+  text-decoration: none;
+}
+
+.page-footer__nav {
+  flex-shrink: 0;
+  width: 550px;
+}
+
+.footer-nav__items {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+
+  list-style: none;
+
+  &--beige {
+    .footer-nav__link {
+      color: $beige;
+    }
+  }
+}
+
+.footer-nav__link {
+  display: block;
+  padding: 10px;
+  padding-right: 0;
+  padding-left: 20px;
+
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.page-footer__bottom {
+  padding: 10px 0;
+
+  color: white;
+
+  background-color: $color-main;
+}
+
+.page-footer__bottom-wrap {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__copyright {
+  width: 300px;
+}
+
+.page-footer__social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  margin-right: 2px;
+  margin-left: 2px;
+
+  color: white;
+
+  background-color: $color-main--dark;
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 22px;
+    height: 22px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--vk {
+    &::after {
+      width: 26px;
+      height: 15px;
+
+      background-image: url('../img/icon-vk.svg');
+    }
+  }
+
+  &--fb {
+    &::after {
+      width: 12px;
+      height: 22px;
+
+      background-image: url('../img/icon-fb.svg');
+    }
+  }
+
+  &--in {
+    &::after {
+      width: 21px;
+      height: 21px;
+
+      background-image: url('../img/icon-insta.svg');
+    }
+  }
+
+  span {
+    @include visually-hidden;
+  }
+}
+
+.page-footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.page-footer__contacts-link {
+  display: block;
+
+  color: $beige;
+  text-decoration: none;
+}

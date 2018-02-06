@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+
+  font: inherit;
+  font-size: 14px;
+  vertical-align: top;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $red;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--transparent {
+    background-color: rgba(black, 0.1);
+  }
+}

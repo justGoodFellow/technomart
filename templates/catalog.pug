@@ -41,12 +41,13 @@ html(lang='ru')
             p.page-header__contacts-addr
               | г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           .page-header__user.user
-            a.user__link.user__link--logged(href='#')
-              svg(width='20', height='18')
-                use(xlink:href='img/symbols.svg#icon-user')
-              | Равшан Джамшутович
-              svg(width='20', height='17')
-                use(xlink:href='img/symbols.svg#icon-login')
+            .user__links
+              a.user__link.user__link--logged(href='#')
+                svg(width='20', height='18')
+                  use(xlink:href='img/symbols.svg#icon-user')
+                | Равшан Джамшутович
+                svg(width='20', height='17')
+                  use(xlink:href='img/symbols.svg#icon-login')
             ul.user__menu
               li.user__menu-item
                 a.user__menu-link(href='#')

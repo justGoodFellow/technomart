@@ -1,0 +1,97 @@
+.services {
+  margin-top: 65px;
+  padding-top: 10px;
+
+  background-color: $color-main--lighten;
+}
+
+.services__wrapper {
+  @include container;
+}
+
+.services__title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.services__description {
+  width: 400px;
+
+  font-size: 13px;
+  line-height: 24px;
+  font-family: $font-second;
+}
+
+.services__slider {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+}
+
+.services__controls {
+  width: 240px;
+  margin-top: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services__control-btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  text-align: left;
+  color: white;
+
+  background-color: $color-main--light;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    color: $color-main--light;
+
+    background-color: white;
+  }
+}
+
+.services__slide {
+  box-sizing: border-box;
+  width: 620px;
+  height: 285px;
+  padding-right: 240px;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &:nth-child(1) {
+    background-image: url('../img/bg-services-slide-1.jpg');
+  }
+
+  &:nth-child(2) {
+    background-image: url('../img/bg-services-slide-2.jpg');
+  }
+
+  &:nth-child(3) {
+    background-image: url('../img/bg-services-slide-3.jpg');
+  }
+}
+
+.services__slide-title {
+  margin-top: 0;
+
+  font-weight: normal;
+  font-size: 36px;
+  color: $color-main--light;
+  text-transform: uppercase;
+}
+
+.services__slide-description {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: $font-second;
+}

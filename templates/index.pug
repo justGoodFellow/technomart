@@ -36,17 +36,18 @@ html(lang='ru')
           p.page-header__description
             | Интернет-магазин строительных материалов и инструментов для ремонта
           address.page-header__contacts
-            a(href='tel:+78125550555')
+            a.page-header__contacts-phone(href='tel:+78125550555')
               | +7 (812) 555-05-55
             p.page-header__contacts-addr
               | г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           .page-header__user.user
-            a.user__link.user__link-login(href='#')
-              svg(width='20', height='17')
-                use(xlink:href='img/symbols.svg#icon-login')
-              | Войти
-            a.user__link(href='#')
-              | Регистрация
+            .user__links
+              a.user__link.user__link-login(href='#')
+                svg(width='20', height='17')
+                  use(xlink:href='img/symbols.svg#icon-login')
+                | Войти
+              a.user__link(href='#')
+                | Регистрация
         nav.main-nav
           ul.main-nav__items
             li.main-nav__item
@@ -74,63 +75,73 @@ html(lang='ru')
       section.promo
         .promo__wrapper
           .promo__items
-            .promo__item
+            .promo__item.promo__item--materials
               span.flag-new
-                | Новинка
-              h3.promo__item-title
-                | Материалы
-              a.promo__item-link(href='#')
-                | На любой вкус
-            .promo__item
-              h3.promo__item-title
-                | Инструменты
-              a.promo__item-link(href='#')
-                | На все случаи
-            .promo__item
-              h3.promo__item-title
-                | Техника
-              a.promo__item-link(href='#')
-                | Для стройки
-            .promo__item.promo__slider.slider-promo
-              .slider-promo__slide
+                span
+                  | Новинка
+              .promo__item-inner
+                h3.promo__item-title
+                  | Материалы
+                a.promo__item-link.btn.btn--transparent(href='#')
+                  | На любой вкус
+            .promo__item.promo__item--tools
+              .promo__item-inner
+                h3.promo__item-title
+                  | Инструменты
+                a.promo__item-link.btn.btn--transparent(href='#')
+                  | На все случаи
+            .promo__item.promo__item--technics
+              .promo__item-inner
+                h3.promo__item-title
+                  | Техника
+                a.promo__item-link.btn.btn--transparent(href='#')
+                  | Для стройки
+            .promo__item.promo__item--big.promo__slider.slider-promo
+              .slider-promo__slide.slider-promo__slide--punchers.slider-promo__slide--active
                 h3.slider-promo__title
                   | Перфораторы
                 p.slider-promo__description
                   | Настоящие мужские игрушки
-                a.slider-promo__link(href='#')
+                a.slider-promo__link.btn(href='#')
                   | Открыть каталог
-              .slider-promo__slide
+              .slider-promo__slide.slider-promo__slide--drills
                 h3.slider-promo__title
                   | Дрели
                 p.slider-promo__description
                   | Соседям на радость!
-                a.slider-promo__link(href='#')
+                a.slider-promo__link.btn(href='#')
                   | Открыть каталог
               .slider-promo__arrows
                 button(type='button')
-                  | Предыдущий
+                  span
+                    | Предыдущий
                 button(type='button')
-                  | Следующий
+                  span
+                    | Следующий
               .slider-promo__breadcrumbs
                 button(type='button')
-                  | 1
+                  span
+                    | 1
                 button(type='button')
-                  | 2
-            .promo__item
-              h3.promo__item-title
-                | Скидки 50%
-              a.promo__item-link(href='#')
-                | На
-                |
-                span
-                  | 350
-                |
-                | товаров
-            .promo__item
-              h3.promo__item-title
-                | Доставка
-              a.promo__item-link(href='#')
-                | Бесплатно
+                  span
+                    | 2
+            .promo__item.promo__item--discounts
+              .promo__item-inner
+                h3.promo__item-title
+                  | Скидки 50%
+                a.promo__item-link.btn.btn--transparent(href='#')
+                  | На
+                  |
+                  span
+                    | 350
+                  |
+                  | товаров
+            .promo__item.promo__item--delivery
+              .promo__item-inner
+                h3.promo__item-title
+                  | Доставка
+                a.promo__item-link.btn.btn--transparent(href='#')
+                  | Бесплатно
       section.popular
         .popular__wrapper
           .popular__header
@@ -148,8 +159,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-1.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 9000
                 span.product__discount
                   | 32500 Р.
@@ -164,8 +175,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 3000
                 span.product__discount
                   | 22500 Р.
@@ -180,16 +191,17 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-3.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 6000
                 span.product__discount
                   | 30500 Р.
                 span.product__price
                   | 25500 Р.
             .popular__item.product
-              span.product__flag-new
-                | Новинка
+              span.product__flag-new.flag-new
+                span
+                  | Новинка
               .product__actions
                 a.product__buy(href='#')
                   | Купить
@@ -198,8 +210,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 2000
                 span.product__price
                   | 12500 Р.
@@ -211,21 +223,21 @@ html(lang='ru')
             a.btn(href='#')
               | Все производители
           .popular__items
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-bosch.png', width='122', height='32', alt='Bosch')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-makita.png', width='123', height='40', alt='Makita')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-dewalt.png', width='146', height='44', alt='DeWALT')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-interskol.png', width='184', height='32', alt='Интерскол')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-hitachi.png', width='143', height='22', alt='Hitachi')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-lg.png', width='121', height='73', alt='LG')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-aeg.png', width='151', height='96', alt='AEG')
-            a.popular__item(href='#')
+            a.popular__item.brand(href='#')
               img(src='img/logo-metabo.png', width='155', height='55', alt='Metabo')
       section.services
         .services__wrapper
@@ -236,7 +248,7 @@ html(lang='ru')
           .services__slider
             ul.services__controls
               li.services__control
-                button.services__control-btn.services__control--active(type='button')
+                button.services__control-btn.services__control-btn--active(type='button', disabled)
                   | Доставка
               li.services__control
                 button.services__control-btn(type='button')
@@ -264,7 +276,7 @@ html(lang='ru')
                   | Отправить заявку
       .info
         .info__wrapper
-          .info__company
+          section.info__company
             h2.info__title
               | Компания «Техномарт»
             p.info__description
@@ -280,7 +292,7 @@ html(lang='ru')
                 | ЖелДорЭкспедиция
             a.info__company-more.btn(href='#')
               | Подробнее о компании
-          .info__contacts
+          section.info__contacts
             h2.info__title
               | Контакты
             p.info__description
@@ -293,7 +305,8 @@ html(lang='ru')
           .info__modal-map-wrap
             img(src='img/map--big.jpg', width='940', height='446', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
           button.modal__close(type='button')
-            | Закрыть
+            span
+              | Закрыть
         .info__modal-feedback.feedback.modal
           form.feedback__form(action='#')
             .feedback__items
@@ -310,10 +323,12 @@ html(lang='ru')
                 label.feedback__label(for='text')
                   | Текст письма:
                 textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
-            button.feedback__send.btn(type='submit')
-              | Отправить
+            .feedback__footer
+              button.feedback__send.btn.btn--fluid(type='submit')
+                | Отправить
           button.modal__close(type='button')
-            | Закрыть
+            span
+              | Закрыть
         .modal__overlay
 
     include layouts/footer.pug

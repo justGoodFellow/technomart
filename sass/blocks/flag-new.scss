@@ -1,0 +1,15 @@
+.flag-new {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 59px;
+
+  background-image: url('../img/flag-new.png');
+  background-repeat: no-repeat;
+
+  span {
+    @include visually-hidden;
+  }
+}
