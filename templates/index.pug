@@ -301,7 +301,7 @@ html(lang='ru')
               img(src='img/map.jpg', width='300', height='158', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
             a.btn.btn--fluid(href='#')
               | Заблудились? Напишите нам!
-        .info__modal-map.modal
+        .info__modal-map
           .info__modal-map-wrap
             img(src='img/map--big.jpg', width='940', height='446', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
           button.modal__close(type='button')
@@ -309,7 +309,7 @@ html(lang='ru')
               | Закрыть
         .info__modal-feedback.feedback.modal
           form.feedback__form(action='#')
-            .feedback__items
+            .feedback__items.modal__inner
               .feedback__item-group
                 .feedback__item
                   label.feedback__label(for='name')
@@ -323,7 +323,7 @@ html(lang='ru')
                 label.feedback__label(for='text')
                   | Текст письма:
                 textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
-            .feedback__footer
+            .feedback__footer.modal__footer
               button.feedback__send.btn.btn--fluid(type='submit')
                 | Отправить
           button.modal__close(type='button')

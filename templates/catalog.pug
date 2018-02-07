@@ -36,7 +36,7 @@ html(lang='ru')
           p.page-header__description
             | Интернет-магазин строительных материалов и инструментов для ремонта
           address.page-header__contacts
-            a(href='tel:+78125550555')
+            a.page-header__contacts-phone(href='tel:+78125550555')
               | +7 (812) 555-05-55
             p.page-header__contacts-addr
               | г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -345,17 +345,17 @@ html(lang='ru')
           p.catalog__info-description
             | Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
       .catalog__cart-popup.cart-popup.modal
-      .cart-popup__inner
-        span.cart-popup__desc
-          | Товар добавлен в корзину!
-      .cart-popup__inner
-        .cart-popup__buttons
+        .cart-popup__inner.modal__inner
+          span.cart-popup__desc
+            | Товар добавлен в корзину!
+        .cart-popup__buttons.modal__footer
           a.cart-popup__btn.btn(href='#')
             | Оформить заказ
           a.cart-popup__btn.btn(href='#')
             | Продолжить покупки
-      button.modal__close(type='button')
-        | Закрыть
+        button.modal__close(type='button')
+          span
+            | Закрыть
       .modal__overlay
 
     include layouts/footer.pug

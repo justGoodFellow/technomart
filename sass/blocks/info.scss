@@ -75,11 +75,11 @@
 }
 
 .info__modal-map {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-
   display: none;
+
   width: 940px;
   height: 446px;
   margin-top: -223px;
@@ -87,24 +87,12 @@
 }
 
 .feedback {
-  @include container;
-
-  position: fixed;
   top: 50%;
-  left: 50%;
-  z-index: 2;
 
   display: none;
-  box-sizing: border-box;
-  width: 620px;
   min-height: 430px;
   margin-top: -215px;
-  margin-left: -310px;
   padding: 0;
-
-  background-color: white;
-  border-top: 7px solid $red;
-  box-shadow: 0 20px 40px 0 rgba(black, 0.75);
 
   &--show {
     display: block;
@@ -117,10 +105,6 @@
     animation-name: shake;
     animation-duration: 0.6s;
   }
-}
-
-.feedback__items {
-  padding: 30px 80px;
 }
 
 .feedback__item-group {
@@ -182,12 +166,6 @@ textarea.feedback__field {
   height: 120px;
 
   resize: none;
-}
-
-.feedback__footer {
-  padding: 37px 80px;
-
-  background-color: $color-main--lighten;
 }
 
 .modal {
