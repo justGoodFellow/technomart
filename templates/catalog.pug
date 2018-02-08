@@ -84,8 +84,9 @@ html(lang='ru')
           nav.catalog__nav.page-nav
             ul.page-nav__list
               li.page-nav__item
-                a.page-nav__link(href='index.html')
-                  | Главная
+                a.page-nav__link.page-nav__link--index(href='index.html')
+                  span
+                    | Главная
               li.page-nav__item
                 a.page-nav__link(href='#')
                   | Каталог
@@ -99,8 +100,9 @@ html(lang='ru')
             | Перфораторы
       .catalog__wrapper
         form.catalog__filters
-          h4.catalog__filter-type
-            | Фильтр:
+          .catalog__filter-type-wrap
+            h4.catalog__filter-type
+              | Фильтр:
           fieldset.catalog__filters-group
             legend
               h3.catalog__filters-title.catalog__legend
@@ -108,7 +110,7 @@ html(lang='ru')
             .catalog__filters-cost.range-filter
               .range-filter__range-controls
                 .range-filter__scale
-                  .range-filter__bar(style='width: 70%;')
+                  .range-filter__bar(style='width: 80%;')
                   .range-filter__toggle.range-filter__min-toggle
                   .range-filter__toggle.range-filter__max-toggle
               .range-filter__price-controls
@@ -162,24 +164,27 @@ html(lang='ru')
             | Показать
         .catalog__content
           .catalog__sort
-            h4.catalog__filter-type
-              | Сортировка:
-            ul.catalog__sort-items
-              li.catalog__sort-item.catalog__sort-item--active
-                button.catalog__sort-btn(type='button', disabled)
-                  | По цене
-              li.catalog__sort-item
-                button.catalog__sort-btn(type='button')
-                  | По типу
-              li.catalog__sort-item
-                button.catalog__sort-btn(type='button')
-                  | По функционалу
-              li.catalog__sort-item.catalog__sort-item--active
-                button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--down(type='button', disabled)
-                  | Прямой порядок
-              li.catalog__sort-item
-                button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--up(type='button')
-                  | Обратный порядок
+            .catalog__filter-type-wrap
+              h4.catalog__filter-type
+                | Сортировка:
+              ul.catalog__sort-items
+                li.catalog__sort-item.catalog__sort-item--active
+                  button.catalog__sort-btn(type='button', disabled)
+                    | По цене
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По типу
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По функционалу
+                li.catalog__sort-item
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button', disabled)
+                    span
+                      | Обратный порядок
+                li.catalog__sort-item.catalog__sort-item--active
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button')
+                    span
+                      | Прямой порядок
           .catalog__items
             .catalog__item.product
               .product__actions
@@ -214,8 +219,9 @@ html(lang='ru')
                 span.product__price
                   | 25500 Р.
             .catalog__item.product
-              span.product__flag-new
-                | Новинка
+              .product__flag-new.flag-new
+                span
+                  | Новинка
               .product__actions
                 a.product__buy(href='#')
                   | Купить
@@ -230,8 +236,9 @@ html(lang='ru')
                 span.product__price
                   | 12500 Р.
             .catalog__item.product
-              span.product__flag-new
-                | Новинка
+              .product__flag-new.flag-new
+                span
+                  | Новинка
               .product__actions
                 a.product__buy(href='#')
                   | Купить
@@ -278,8 +285,9 @@ html(lang='ru')
                 span.product__price
                   | 12500 Р.
             .catalog__item.product
-              span.product__flag-new
-                | Новинка
+              .product__flag-new.flag-new
+                span
+                  | Новинка
               .product__actions
                 a.product__buy(href='#')
                   | Купить
