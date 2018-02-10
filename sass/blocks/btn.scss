@@ -14,7 +14,17 @@
   background-color: $red;
   border: none;
   border-radius: 3px;
+  outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $red--darken;
+  }
+
+  &:active {
+    background-color: $red--darkest;
+  }
 
   &--fluid {
     width: 100%;
@@ -22,5 +32,14 @@
 
   &--transparent {
     background-color: rgba(black, 0.1);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(black, 0.2);
+    }
+
+    &:active {
+      background-color: rgba(black, 0.3);
+    }
   }
 }

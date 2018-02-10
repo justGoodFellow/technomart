@@ -157,15 +157,76 @@
 }
 
 .slider-promo__link {
+  min-width: 195px;
   margin-top: auto;
+  z-index: 1;
 }
 
 .slider-promo__arrows {
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-bottom: -25px;
+  padding: 0 25px;
+}
+
+.slider-promo__arrow {
+  display: block;
+  padding: 14px;
+
+  background-color: transparent;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  cursor: pointer;
+
+  &--left {
+    transform: rotate(135deg);
+  }
+
+  &--right {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    @include visually-hidden;
+  }
 }
 
 .slider-promo__breadcrumbs {
   position: absolute;
-  bottom: 0;
+  bottom: 35px;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    box-sizing: content-box;
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    padding: 0;
+
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $red;
+      cursor: auto;
+    }
+
+    span {
+      @include visually-hidden;
+    }
+  }
 }

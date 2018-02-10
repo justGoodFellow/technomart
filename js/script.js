@@ -1,3 +1,5 @@
 'use strict';
 
-console.log('Test');
+document.addEventListener('DOMContentLoaded', function () {
+  svg4everybody();
+});

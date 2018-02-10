@@ -58,6 +58,19 @@
   font-size: 18px;
   color: white;
   text-decoration: none;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+
+    opacity: 0.5;
+  }
 }
 
 .page-footer__bottom {
@@ -103,6 +116,12 @@
 
   background-color: $color-main--dark;
   border-radius: 50%;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+  }
 
   &::after {
     content: '';
@@ -157,4 +176,16 @@
 
   color: $beige;
   text-decoration: none;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $red;
+    text-decoration: none;
+  }
 }

@@ -112,14 +112,14 @@ html(lang='ru')
                 a.slider-promo__link.btn(href='#')
                   | Открыть каталог
               .slider-promo__arrows
-                button(type='button')
+                button.slider-promo__arrow.slider-promo__arrow--left(type='button')
                   span
                     | Предыдущий
-                button(type='button')
+                button.slider-promo__arrow.slider-promo__arrow--right(type='button')
                   span
                     | Следующий
               .slider-promo__breadcrumbs
-                button(type='button')
+                button(type='button', disabled)
                   span
                     | 1
                 button(type='button')
@@ -147,7 +147,7 @@ html(lang='ru')
           .popular__header
             h2.popular__title
               | Популярные товары:
-            a.btn(href='#')
+            a.popular__btn.btn(href='#')
               | Все популярные товары
           .popular__items
             .popular__item.product
@@ -220,7 +220,7 @@ html(lang='ru')
           .popular__header
             h2.popular__title
               | Популярные производители:
-            a.btn(href='#')
+            a.popular__btn.btn(href='#')
               | Все производители
           .popular__items
             a.popular__item.brand(href='#')
@@ -257,7 +257,7 @@ html(lang='ru')
                 button.services__control-btn(type='button')
                   | Кредит
             .services__slides
-              .services__slide
+              .services__slide.services__slide--active
                 h3.services__slide-title
                   | Доставка
                 p.services__slide-description
@@ -272,7 +272,7 @@ html(lang='ru')
                   | Кредит
                 p.services__slide-description
                   | Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь
-                a.btn(href='#')
+                a.services__slide-btn.btn(href='#')
                   | Отправить заявку
       .info
         .info__wrapper

@@ -49,16 +49,29 @@
 
   background-color: $color-main--light;
   border: none;
+  border-bottom: 1px solid $color-main;
+  outline: none;
+  box-shadow: inset 0 1px #405069;
   cursor: pointer;
 
   &:disabled {
     color: $color-main--light;
 
     background-color: white;
+    border: none;
+    box-shadow: none;
+    cursor: auto;
+  }
+
+  &:hover:not(:disabled),
+  &:focus {
+    background-color: $color-main;
+    box-shadow: none;
   }
 }
 
 .services__slide {
+  display: none;
   box-sizing: border-box;
   width: 620px;
   height: 285px;
@@ -67,6 +80,10 @@
 
   background-repeat: no-repeat;
   background-position: right bottom;
+
+  &--active {
+    display: block;
+  }
 
   &:nth-child(1) {
     background-image: url('../img/bg-services-slide-1.jpg');
@@ -94,4 +111,8 @@
   font-size: 13px;
   line-height: 24px;
   font-family: $font-second;
+}
+
+.services__slide-btn {
+  min-width: 195px;
 }
