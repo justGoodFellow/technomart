@@ -53,6 +53,10 @@
   width: 220px;
   height: 145px;
 
+  &:focus {
+    outline: none;
+  }
+
   img {
     display: block;
   }

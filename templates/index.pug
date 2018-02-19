@@ -14,19 +14,19 @@ html(lang='ru')
           a.logo.page-header__logo
             | Техномарт
           .page-header__top-menu.header-menu
-            .header-menu__item.header-menu__item--search.search-field
-              .search-field__icon-wrap
+            form.header-menu__item.header-menu__item--search.search-field
+              input(type='search', placeholder='Поиск')
+              button.search-field__submit(type='submit')
+                span
+                  | Поиск
                 svg(width='17', height='17')
                   use(xlink:href='img/symbols.svg#icon-search')
-              input(placeholder='Поиск')
             a.header-menu__item.header-menu__item--bookmarks(href='#')
-              | Закладки:
-              |
+              | Закладки:&nbsp;
               span
                 | 0
             a.header-menu__item.header-menu__item--cart(href='#')
-              | Корзина:
-              |
+              | Корзина:&nbsp;
               span
                 | 0
             a.header-menu__item.header-menu__item--order(href='#')
@@ -151,11 +151,6 @@ html(lang='ru')
               | Все популярные товары
           .popular__items
             .popular__item.product
-              .product__actions
-                a.product__buy(href='#')
-                  | Купить
-                a.product__bookmark(href='#')
-                  | В закладки
               .product__img-wrap
                 img(src='img/product-1.jpg', width='218', height='169', alt='')
               .product__inner
@@ -166,6 +161,11 @@ html(lang='ru')
                   | 32500 Р.
                 span.product__price
                   | 25500 Р.
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
             .popular__item.product
               .product__actions
                 a.product__buy(href='#')
