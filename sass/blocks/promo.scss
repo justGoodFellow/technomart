@@ -157,9 +157,10 @@
 }
 
 .slider-promo__link {
+  z-index: 1;
+
   min-width: 195px;
   margin-top: auto;
-  z-index: 1;
 }
 
 .slider-promo__arrows {
