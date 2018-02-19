@@ -11,6 +11,11 @@
 
   border: 1px solid $gray;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 25px rgba($color-main, 0.5);
+  }
+
   &:hover {
     .product__actions {
       visibility: visible;

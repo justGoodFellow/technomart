@@ -14,19 +14,19 @@ html(lang='ru')
           a.logo.page-header__logo(href='index.html')
             | Техномарт
           .page-header__top-menu.header-menu
-            .header-menu__item.header-menu__item--search.search-field
-              .search-field__icon-wrap
+            form.header-menu__item.header-menu__item--search.search-field
+              input(type='search', placeholder='Поиск')
+              button.search-field__submit(type='submit')
+                span
+                  | Поиск
                 svg(width='17', height='17')
                   use(xlink:href='img/symbols.svg#icon-search')
-              input(placeholder='Поиск')
             a.header-menu__item.header-menu__item--bookmarks(href='#')
-              | Закладки:
-              |
+              | Закладки:&nbsp;
               span
                 | 0
-            a.header-menu__item.header-menu__item--cart.header-menu__item-cart--active(href='#')
-              | Корзина:
-              |
+            a.header-menu__item.header-menu__item--cart.header-menu__item--cart--active(href='#')
+              | Корзина:&nbsp;
               span
                 | 10
             a.header-menu__item.header-menu__item--order(href='#')
@@ -43,11 +43,14 @@ html(lang='ru')
           .page-header__user.user
             .user__links
               a.user__link.user__link--logged(href='#')
-                svg(width='20', height='18')
+                svg.icon-user(width='20', height='18')
                   use(xlink:href='img/symbols.svg#icon-user')
                 | Равшан Джамшутович
-                svg(width='20', height='17')
-                  use(xlink:href='img/symbols.svg#icon-login')
+                button.user__log-out(type='button')
+                  span
+                    | Выйти
+                  svg.icon-login(width='20', height='17')
+                    use(xlink:href='img/symbols.svg#icon-login')
             ul.user__menu
               li.user__menu-item
                 a.user__menu-link(href='#')
@@ -160,7 +163,7 @@ html(lang='ru')
                 input.radiobox__input(type='radio', id='сorded', name='power')
                 label.catalog__filters-selection.radiobox__label(for='сorded')
                   | Сетевые
-          button.catalog__filters-btn.btn(type='submit')
+          button.catalog__filters-btn.btn.btn--white(type='submit')
             | Показать
         .catalog__content
           .catalog__sort
@@ -195,8 +198,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 3000
                 span.product__discount
                   | 22500 Р.
@@ -211,8 +214,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-3.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 6000
                 span.product__discount
                   | 30500 Р.
@@ -230,8 +233,57 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
+                    | Перфоратор BOSCH BFG 2000
+                span.product__price
+                  | 12500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a.product__title(href='#')
+                  h3
+                    | Перфоратор BOSCH BFG 3000
+                span.product__discount
+                  | 22500 Р.
+                span.product__price
+                  | 15500 Р.
+            .catalog__item.product
+              .product__flag-new.flag-new
+                span
+                  | Новинка
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-3.jpg', width='218', height='169', alt='')
+              .product__inner
+                a.product__title(href='#')
+                  h3
+                    | Перфоратор BOSCH BFG 6000
+                span.product__discount
+                  | 30500 Р.
+                span.product__price
+                  | 25500 Р.
+            .catalog__item.product
+              .product__actions
+                a.product__buy(href='#')
+                  | Купить
+                a.product__bookmark(href='#')
+                  | В закладки
+              .product__img-wrap
+                img(src='img/product-2.jpg', width='218', height='169', alt='')
+              .product__inner
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 2000
                 span.product__price
                   | 12500 Р.
@@ -247,8 +299,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 3000
                 span.product__discount
                   | 22500 Р.
@@ -263,8 +315,8 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-3.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 6000
                 span.product__discount
                   | 30500 Р.
@@ -279,72 +331,23 @@ html(lang='ru')
               .product__img-wrap
                 img(src='img/product-2.jpg', width='218', height='169', alt='')
               .product__inner
-                a(href='#')
-                  h3.product__title
-                    | Перфоратор BOSCH BFG 2000
-                span.product__price
-                  | 12500 Р.
-            .catalog__item.product
-              .product__flag-new.flag-new
-                span
-                  | Новинка
-              .product__actions
-                a.product__buy(href='#')
-                  | Купить
-                a.product__bookmark(href='#')
-                  | В закладки
-              .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='')
-              .product__inner
-                a(href='#')
-                  h3.product__title
-                    | Перфоратор BOSCH BFG 3000
-                span.product__discount
-                  | 22500 Р.
-                span.product__price
-                  | 15500 Р.
-            .catalog__item.product
-              .product__actions
-                a.product__buy(href='#')
-                  | Купить
-                a.product__bookmark(href='#')
-                  | В закладки
-              .product__img-wrap
-                img(src='img/product-3.jpg', width='218', height='169', alt='')
-              .product__inner
-                a(href='#')
-                  h3.product__title
-                    | Перфоратор BOSCH BFG 6000
-                span.product__discount
-                  | 30500 Р.
-                span.product__price
-                  | 25500 Р.
-            .catalog__item.product
-              .product__actions
-                a.product__buy(href='#')
-                  | Купить
-                a.product__bookmark(href='#')
-                  | В закладки
-              .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='')
-              .product__inner
-                a(href='#')
-                  h3.product__title
+                a.product__title(href='#')
+                  h3
                     | Перфоратор BOSCH BFG 2000
                 span.product__price
                   | 12500 Р.
           .catalog__nav
             ul.catalog__nav-items
               li.catalog__nav-item.catalog__nav-item--active
-                button.catalog__nav-btn.btn(type='button', disabled)
+                button.catalog__nav-btn.btn.btn--white(type='button', disabled)
                   | 1
               li.catalog__nav-item
-                button.catalog__nav-btn.btn(type='button')
+                button.catalog__nav-btn.btn.btn--white(type='button')
                   | 2
               li.catalog__nav-item
-                button.catalog__nav-btn.btn(type='button')
+                button.catalog__nav-btn.btn.btn--white(type='button')
                   | 3
-            button.catalog__nav-next.btn(type='button')
+            button.catalog__nav-next.btn.btn--white(type='button')
               | Следующая
       section.catalog__info
         .catalog__info-wrapper

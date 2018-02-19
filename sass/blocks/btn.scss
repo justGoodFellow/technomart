@@ -42,4 +42,27 @@
       background-color: rgba(black, 0.3);
     }
   }
+
+  &--white {
+    padding: 0 15px;
+
+    font-size: 13px;
+    line-height: 36px;
+    font-family: $font-second;
+    color: black;
+
+    background-color: transparent;
+    border: 1px solid $gray;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: $gray--dark;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: $red;
+    }
+  }
 }
