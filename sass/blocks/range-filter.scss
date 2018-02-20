@@ -1,12 +1,13 @@
 .range-filter {
   width: 220px;
+  padding-bottom: 20px;
 }
 
 .range-filter__range-controls {
   position: relative;
 
   height: 80px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 0 20px;
   overflow: hidden;
 
@@ -49,6 +50,9 @@
 .range-filter__price-controls {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  font-family: $font-second;
 
   label {
     @include visually-hidden;

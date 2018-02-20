@@ -1,10 +1,18 @@
+.catalog {
+  padding-top: 5px;
+}
+
 .catalog__header-wrap {
   @include container;
 }
 
+.page-nav {
+  margin: 20px 0;
+}
+
 .page-nav__list {
   display: flex;
-  margin: 25px 0;
+  margin: 5px 0;
   padding: 0;
 
   list-style: none;
@@ -59,7 +67,9 @@
 }
 
 .catalog__title {
-  padding: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 28px;
 
   font-weight: normal;
   font-size: 30px;
@@ -74,6 +84,7 @@
 
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .catalog__filters {
@@ -84,8 +95,10 @@
 .catalog__filter-type-wrap {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 15px;
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 10px 20px;
+  padding-right: 10px;
 
   background-color: $red--light;
 }
@@ -100,8 +113,10 @@
 }
 
 .catalog__filters-group {
+  margin: 0;
+  margin-bottom: 5px;
   padding: 0;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
 
   border: none;
   border-bottom: 1px solid $gray;
@@ -171,7 +186,7 @@
 
   display: flex;
   align-items: center;
-  margin: 15px 0;
+  margin-bottom: 15px;
 
   font-family: $font-second;
   text-transform: uppercase;
@@ -243,7 +258,7 @@
 }
 
 .checkbox__label {
-  margin: 18px 0;
+  margin-bottom: 18px;
 
   &::before {
     width: 23px;
@@ -268,6 +283,7 @@
 
 .catalog__filters-btn {
   min-width: 140px;
+  margin-top: 55px;
 }
 
 .catalog__content {
@@ -286,7 +302,7 @@
 }
 
 .catalog__sort-btn {
-  margin: 0 10px;
+  margin: 0 35px;
   padding: 0;
 
   font: inherit;
@@ -323,6 +339,7 @@
   &--arrow {
     width: 0;
     height: 0;
+    margin: 0 10px;
     padding: 0;
 
     border-width: 9px 4.5px 0 4.5px;
@@ -349,6 +366,7 @@
 .catalog__items {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .catalog__item {
@@ -362,7 +380,7 @@
 
 .catalog__nav {
   display: flex;
-  margin: 15px 0;
+  margin: 30px 0;
 }
 
 .catalog__nav-items {
@@ -396,7 +414,8 @@
 }
 
 .catalog__info {
-  padding: 60px 0;
+  padding: 40px 0;
+  padding-bottom: 55px;
 
   background-color: $color-main--lighten;
 }

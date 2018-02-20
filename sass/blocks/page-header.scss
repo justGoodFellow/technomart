@@ -219,7 +219,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 35px;
+  min-height: 82px;
+  margin-bottom: 31px;
   padding-top: 45px;
 }
 
@@ -227,8 +228,8 @@
   box-sizing: border-box;
   width: 300px;
   margin: 5px 0;
-  padding-left: 50px;
   padding-right: 30px;
+  padding-left: 50px;
 
   line-height: 23px;
   color: $red;
@@ -323,7 +324,7 @@
     display: flex;
     flex-grow: 1;
     margin-left: 0;
-    padding-right: 10px;
+    padding-right: 0;
     padding-left: 13px;
 
     svg {
@@ -346,7 +347,9 @@
     &:active {
       color: rgba(black, 0.3);
 
-      opacity: 0.3;
+      svg {
+        opacity: 0.3;
+      }
     }
   }
 }
@@ -362,17 +365,39 @@
 }
 
 .user__log-out {
+  display: flex;
   margin-left: auto;
-  padding: 0;
+  padding: 14px;
 
   font: inherit;
 
   background: none;
+  background-color: white;
   border: none;
   cursor: pointer;
 
   svg {
     display: block;
+    margin: auto;
+
+    opacity: 0.3;
+
+    fill: $color-main--light;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
   }
 
   span {

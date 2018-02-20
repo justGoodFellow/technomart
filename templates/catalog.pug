@@ -45,11 +45,11 @@ html(lang='ru')
                 svg.icon-user(width='20', height='18')
                   use(xlink:href='img/symbols.svg#icon-user')
                 | Равшан Джамшутович
-                button.user__log-out(type='button')
-                  span
-                    | Выйти
-                  svg.icon-login(width='20', height='17')
-                    use(xlink:href='img/symbols.svg#icon-login')
+              a.user__log-out(href='#')
+                span
+                  | Выйти
+                svg.icon-login(width='20', height='17')
+                  use(xlink:href='img/symbols.svg#icon-login')
             ul.user__menu
               li.user__menu-item
                 a.user__menu-link(href='#')
@@ -83,7 +83,7 @@ html(lang='ru')
     section.catalog
       .catalog__header
         .catalog__header-wrap
-          nav.catalog__nav.page-nav
+          nav.page-nav
             ul.page-nav__list
               li.page-nav__item
                 a.page-nav__link.page-nav__link--index(href='index.html')
@@ -120,6 +120,8 @@ html(lang='ru')
                   label(for='from')
                     | От
                   input(id='from', type='text', value='0')
+                span
+                  | —
                 .range-filter__max-price
                   label(for='to')
                     | До
