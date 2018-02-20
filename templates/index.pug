@@ -279,9 +279,9 @@ html(lang='ru')
           section.info__company
             h2.info__title
               | Компания «Техномарт»
-            p.info__description
+            p.info__description.info__company-desc
               | Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-            p.info__description
+            p.info__description.info__company-desc
               | Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
             ul.info__items
               li.info__item
@@ -296,10 +296,12 @@ html(lang='ru')
             h2.info__title
               | Контакты
             p.info__description
-              | Вы можете забрать товар сами, заехав в наш офис:
+              | Вы можете забрать товар сами,
+              br
+              | заехав в наш офис:
             a.info__contacts-map(href='#')
               img(src='img/map.jpg', width='300', height='158', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
-            a.btn.btn--fluid(href='#')
+            a.info__map-open.btn.btn--fluid(href='#')
               | Заблудились? Напишите нам!
         .info__modal-map
           .info__modal-map-wrap

@@ -1,6 +1,6 @@
 .services {
   margin-top: 65px;
-  padding-top: 10px;
+  padding-top: 40px;
 
   background-color: $color-main--lighten;
 }
@@ -25,21 +25,37 @@
 .services__slider {
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
+  align-items: flex-start;
+  margin-top: 65px;
 }
 
 .services__controls {
+  position: relative;
+
   width: 240px;
   margin-top: 0;
   padding: 0;
 
   list-style: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 10px;
+    height: 272px;
+    margin-top: -136px;
+
+    background-image: url('../img/shadow.png');
+  }
 }
 
 .services__control-btn {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 19px 20px;
 
   font: inherit;
   font-weight: bold;
@@ -100,6 +116,7 @@
 
 .services__slide-title {
   margin-top: 0;
+  margin-bottom: 20px;
 
   font-weight: normal;
   font-size: 36px;

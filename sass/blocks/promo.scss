@@ -107,6 +107,9 @@
 }
 
 .promo__item-title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+
   font-weight: bold;
   font-size: 24px;
 }
@@ -145,14 +148,16 @@
 }
 
 .slider-promo__title {
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin: 0;
 
   font-size: 36px;
   text-transform: uppercase;
 }
 
 .slider-promo__description {
+  margin: 0;
+
+  font-size: 18px;
   font-family: $font-second;
 }
 

@@ -19,6 +19,8 @@
   display: flex;
   flex-grow: 1;
   align-items: center;
+  box-sizing: border-box;
+  padding-right: 20px;
   padding-left: 17px;
 
   font-size: 17px;
@@ -206,7 +208,7 @@
 }
 
 .page-header__middle {
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 
   background-color: $color-main--lighten;
 }
@@ -217,16 +219,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   padding-top: 45px;
 }
 
 .page-header__description {
   box-sizing: border-box;
   width: 300px;
-  margin: 0;
+  margin: 5px 0;
   padding-left: 50px;
+  padding-right: 30px;
 
+  line-height: 23px;
   color: $red;
   font-style: italic;
 }
@@ -266,6 +270,8 @@
 }
 
 .page-header__contacts-addr {
+  margin: 5px 0;
+
   font-size: 14px;
   color: $color-main--light;
 }
@@ -426,7 +432,7 @@
 
 .main-nav__link {
   display: block;
-  padding: 20px 25px;
+  padding: 17px 25px;
 
   font-size: 17px;
   text-align: center;

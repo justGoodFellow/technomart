@@ -14,13 +14,15 @@
 }
 
 .popular__title {
+  margin: 28px 0;
+
   font-size: 30px;
   color: $color-main--light;
   text-transform: uppercase;
 }
 
 .popular__btn {
-  min-width: 225px;
+  min-width: 250px;
 }
 
 .popular__items {
@@ -42,6 +44,7 @@
 
   &:hover,
   &:focus {
+    border: none;
     box-shadow: 0 10px 25px rgba($color-main, 0.5);
   }
 }

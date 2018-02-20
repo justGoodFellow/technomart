@@ -1,6 +1,6 @@
 .info {
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 86px;
 }
 
 .info__wrapper {
@@ -26,6 +26,14 @@
   font-family: $font-second;
 }
 
+.info__company-desc {
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
 .info__items {
   padding: 0;
 
@@ -35,7 +43,7 @@
 .info__item {
   position: relative;
 
-  margin: 25px 0;
+  margin: 20px 0;
   padding-left: 35px;
 
   font-size: 18px;
@@ -56,6 +64,7 @@
 
 .info__company-more {
   min-width: 220px;
+  margin-top: 20px;
 }
 
 .info__contacts {
@@ -65,7 +74,7 @@
 
 .info__contacts-map {
   display: block;
-  margin: 10px 0;
+  margin: 30px 0;
 
   img {
     display: block;
@@ -76,6 +85,10 @@
 
     background-color: #777777;
   }
+}
+
+.info__map-open {
+  margin-top: 15px;
 }
 
 .info__modal-map {
