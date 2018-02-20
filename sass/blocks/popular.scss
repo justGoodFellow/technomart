@@ -44,7 +44,7 @@
 
   &:hover,
   &:focus {
-    border: none;
+    border-color: transparent;
     box-shadow: 0 10px 25px rgba($color-main, 0.5);
   }
 }
