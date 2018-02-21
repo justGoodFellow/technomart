@@ -111,17 +111,17 @@ html(lang='ru')
                 a.slider-promo__link.btn(href='catalog.html')
                   | Открыть каталог
               .slider-promo__arrows
-                button.slider-promo__arrow.slider-promo__arrow--left(type='button')
+                button.slider-promo__arrow.slider-promo__arrow--left(type='button', disabled)
                   span
                     | Предыдущий
                 button.slider-promo__arrow.slider-promo__arrow--right(type='button')
                   span
                     | Следующий
-              .slider-promo__breadcrumbs
-                button(type='button', disabled)
+              .slider-promo__breadcrumb
+                button.slider-promo__breadcrumb-item(type='button', disabled)
                   span
                     | 1
-                button(type='button')
+                button.slider-promo__breadcrumb-item(type='button')
                   span
                     | 2
             .promo__item.promo__item--discounts
@@ -245,16 +245,13 @@ html(lang='ru')
           p.services__description
             | Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           .services__slider
-            ul.services__controls
-              li.services__control
-                button.services__control-btn.services__control-btn--active(type='button', disabled)
-                  | Доставка
-              li.services__control
-                button.services__control-btn(type='button')
-                  | Гарантия
-              li.services__control
-                button.services__control-btn(type='button')
-                  | Кредит
+            .services__controls
+              button.services__control-btn.services__control-btn--active(type='button', disabled)
+                | Доставка
+              button.services__control-btn(type='button')
+                | Гарантия
+              button.services__control-btn(type='button')
+                | Кредит
             .services__slides
               .services__slide.services__slide--active
                 h3.services__slide-title
@@ -300,12 +297,13 @@ html(lang='ru')
               | заехав в наш офис:
             a.info__contacts-map(href='#')
               img(src='img/map.jpg', width='300', height='158', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
-            a.info__map-open.btn.btn--fluid(href='#')
+            a.info__feedback-open.btn.btn--fluid(href='#')
               | Заблудились? Напишите нам!
-        .info__modal-map
-          .info__modal-map-wrap
+        .info__modal-map.map
+          .map__wrapper
             img(src='img/map--big.jpg', width='940', height='446', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
-          button.modal__close(type='button')
+            iframe(src='https://yandex.ru/map-widget/v1/-/CBUZNWQH3D' width='940' height='446' frameborder='0')
+          button.map__close.modal__close(type='button')
             span
               | Закрыть
         .info__modal-feedback.feedback.modal
@@ -327,7 +325,7 @@ html(lang='ru')
             .feedback__footer.modal__footer
               button.feedback__send.btn.btn--fluid(type='submit')
                 | Отправить
-          button.modal__close(type='button')
+          button.feedback__close.modal__close(type='button')
             span
               | Закрыть
         .modal__overlay
