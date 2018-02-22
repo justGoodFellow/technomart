@@ -124,7 +124,7 @@
 .search-field {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  align-items: stretch;
   width: 260px;
   padding-right: 0;
   padding-left: 0;
@@ -147,12 +147,15 @@
     padding: 0;
 
     font: inherit;
-    line-height: 42px;
+    line-height: 48px;
     color: white;
 
     background-color: $color-main;
     border: 0;
+    border-radius: 0;
     outline: 0;
+
+    appearance: none;
 
     &:focus {
       color: black;
@@ -185,7 +188,6 @@
 }
 
 .search-field__submit {
-  height: 100%;
   padding-right: 15px;
   padding-left: 15px;
 
