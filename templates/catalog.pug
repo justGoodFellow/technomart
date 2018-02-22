@@ -159,11 +159,13 @@ html(lang='ru')
               .radiobox
                 input.radiobox__input(type='radio', id='cordless', name='power', checked)
                 label.catalog__filters-selection.radiobox__label(for='cordless')
-                  | Аккумуляторные
+                  span
+                    | Аккумуляторные
               .radiobox
                 input.radiobox__input(type='radio', id='сorded', name='power')
                 label.catalog__filters-selection.radiobox__label(for='сorded')
-                  | Сетевые
+                  span
+                    | Сетевые
           button.catalog__filters-btn.btn.btn--white(type='submit')
             | Показать
         .catalog__content

@@ -188,7 +188,6 @@
   position: relative;
 
   display: flex;
-  align-items: center;
   margin-bottom: 15px;
 
   font-family: $font-second;
@@ -242,6 +241,10 @@
     border-radius: 50%;
   }
 
+  span {
+    padding-top: 2px;
+  }
+
   &::after {
     top: 8px;
     left: 8px;
@@ -261,6 +264,7 @@
 }
 
 .checkbox__label {
+  align-items: center;
   margin-bottom: 18px;
 
   &::before {
