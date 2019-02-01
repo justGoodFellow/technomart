@@ -1,11 +1,6 @@
 doctype html
 html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title
-      | Техномарт
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    link(rel='stylesheet', href='css/style.min.css')
+  include ../layouts/head.pug
   body
     header.page-header
       .page-header__top
@@ -330,5 +325,5 @@ html(lang='ru')
               | Закрыть
         .modal__overlay
 
-    include layouts/footer.pug
+    include ../layouts/footer.pug
     script(src='js/concatenated.js')
