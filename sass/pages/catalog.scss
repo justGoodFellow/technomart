@@ -130,6 +130,7 @@
   margin: 0;
   padding: 17px 0;
 
+  font-weight: bold;
   font-size: 17px;
   font-family: $font-second;
   text-transform: uppercase;
@@ -293,7 +294,7 @@
   margin-top: 55px;
 }
 
-.catalog__content {
+.catalog__col-right {
   flex-shrink: 0;
   width: 700px;
 }
