@@ -5,10 +5,10 @@
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "private": true,
   "engines": {
-    "node": "10.24.1"
+    "node": "14.19.0"
   },
   "scripts": {
-    "test": "editorconfig-tools check *",
+    "test": "editorconfig-cli",
     "build": "gulp",
     "start": "gulp && gulp serve"
   },
@@ -19,12 +19,20 @@
     "iOS >= 10.3",
     "not dead"
   ],
+  "editorconfig-cli": [
+    "*.js",
+    "*.json",
+    "img/**/*.svg",
+    "js/**/*.js",
+    "pug/**/*.pug",
+    "sass/**/*.scss"
+  ],
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^9.8.8",
     "browser-sync": "^2.27.7",
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
-    "editorconfig-tools": "^0.1.1",
     "eslint": "^5.16.0",
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "^4.0.2",
