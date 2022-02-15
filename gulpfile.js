@@ -51,11 +51,7 @@ function styles() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          'last 2 version'
-        ]
-      }),
+      autoprefixer(),
       mqpacker({
         sort: true
       })
