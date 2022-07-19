@@ -1,0 +1,89 @@
+.info
+  .info__wrapper
+    section.info__company
+      h2.info__title
+        | Компания «Техномарт»
+      p.info__description.info__company-desc
+        | Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
+        | для ремонта и строительства не оставит равнодушными любителей
+        | сэкономить на гастарбайтерах.
+      p.info__description.info__company-desc
+        | Мы можем доставить ваш товар в самые отдаленные точки России!
+        | Техномарт работает со многими транспортными компаниями:
+      ul.info__items
+        li.info__item
+          | Деловые линии
+        li.info__item
+          | Автотрейдинг
+        li.info__item
+          | ЖелДорЭкспедиция
+      a.info__company-more.btn(href='#')
+        | Подробнее о компании
+    section.info__contacts
+      h2.info__title
+        | Контакты
+      p.info__description
+        | Вы можете забрать товар сами,
+        br
+        | заехав в наш офис:
+      a.info__contacts-map(href='#')
+        img(
+          src='img/map.jpg'
+          width='300'
+          height='158'
+          alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8'
+        )
+      a.info__feedback-open.btn.btn--fluid(href='#')
+        | Заблудились? Напишите нам!
+  .info__modal-map.map
+    .map__wrapper
+      img(
+        src='img/map--big.jpg'
+        width='940'
+        height='446'
+        alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8'
+      )
+      iframe(
+        src='https://yandex.ru/map-widget/v1/-/CBUZNWQH3D'
+        width='940' height='446'
+      )
+    button.map__close.modal__close(type='button')
+      span
+        | Закрыть
+  .info__modal-feedback.feedback.modal
+    form.feedback__form(action='#')
+      .feedback__items.modal__inner
+        .feedback__item-group
+          .feedback__item
+            label.feedback__label(for='name')
+              | Ваше имя:
+            input.feedback__field(
+              id='name'
+              type='text'
+              name='name'
+              placeholder='Представьтесь, пожалуйста'
+            )
+          .feedback__item
+            label.feedback__label(for='email')
+              | Ваш e-mail:
+            input.feedback__field(
+              id='email'
+              type='email'
+              name='email'
+              placeholder='Для отправки ответа'
+            )
+        .feedback__item
+          label.feedback__label(for='text')
+            | Текст письма:
+          textarea.feedback__field(
+            id='text'
+            name='text'
+            placeholder='В свободной форме'
+          )
+      .feedback__footer.modal__footer
+        button.feedback__send.btn.btn--fluid(type='submit')
+          | Отправить
+    button.feedback__close.modal__close(type='button')
+      span
+        | Закрыть
+  .modal__overlay

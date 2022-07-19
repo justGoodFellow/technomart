@@ -1,6 +1,7 @@
 doctype html
 html(lang='ru')
   include ../layouts/head.pug
+
   body
     header.page-header
       .page-header__top
@@ -9,17 +10,19 @@ html(lang='ru')
             | Техномарт
           .page-header__top-menu.header-menu
             form.header-menu__item.header-menu__item--search.search-field
-              input(type='search', placeholder='Поиск')
+              input(type='search' placeholder='Поиск')
               button.search-field__submit(type='submit')
                 span
                   | Поиск
-                svg(width='17', height='17')
+                svg(width='17' height='17')
                   use(xlink:href='img/symbols.svg#icon-search')
             a.header-menu__item.header-menu__item--bookmarks(href='#')
               | Закладки:&nbsp;
               span
                 | 0
-            a.header-menu__item.header-menu__item--cart.header-menu__item--active(href='#')
+            a.header-menu__item.header-menu__item--cart.header-menu__item--active(
+              href='#'
+            )
               | Корзина:&nbsp;
               span
                 | 10
@@ -28,7 +31,8 @@ html(lang='ru')
       .page-header__middle
         .page-header__middle-wrap
           p.page-header__description
-            | Интернет-магазин строительных материалов и инструментов для ремонта
+            | Интернет-магазин строительных материалов и инструментов для
+            | ремонта
           address.page-header__contacts
             a.page-header__contacts-phone(href='tel:+78125550555')
               | +7 (812) 555-05-55
@@ -37,13 +41,13 @@ html(lang='ru')
           .page-header__user.user
             .user__links
               a.user__link.user__link--logged(href='#')
-                svg.icon-user(width='20', height='18')
+                svg.icon-user(width='20' height='18')
                   use(xlink:href='img/symbols.svg#icon-user')
                 | Равшан Джамшутович
               a.user__log-out(href='#')
                 span
                   | Выйти
-                svg.icon-login(width='20', height='17')
+                svg.icon-login(width='20' height='17')
                   use(xlink:href='img/symbols.svg#icon-login')
             ul.user__menu
               li.user__menu-item
@@ -113,49 +117,89 @@ html(lang='ru')
                 .range-filter__min-price
                   label(for='from')
                     | От
-                  input(id='from', type='text', value='0')
+                  input(id='from' type='text' value='0')
                 span
                   | —
                 .range-filter__max-price
                   label(for='to')
                     | До
-                  input(id='to', type='text', value='30000')
+                  input(id='to' type='text' value='30000')
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Производители:
-            div
+            .catalog__filters-inner
               .checkbox
-                input.checkbox__input(type='checkbox', id='bosch', checked)
-                label.catalog__filters-selection.checkbox__label(for='bosch')
+                input.checkbox__input(
+                  id='bosch'
+                  type='checkbox'
+                  checked
+                )
+                label.catalog__filters-selection.checkbox__label(
+                  for='bosch'
+                )
                   | Bosch
               .checkbox
-                input.checkbox__input(type='checkbox', id='interskol')
-                label.catalog__filters-selection.checkbox__label(for='interskol')
+                input.checkbox__input(
+                  id='interskol'
+                  type='checkbox'
+                )
+                label.catalog__filters-selection.checkbox__label(
+                  for='interskol'
+                )
                   | Интрескол
               .checkbox
-                input.checkbox__input(type='checkbox', id='makita', checked)
-                label.catalog__filters-selection.checkbox__label(for='makita')
+                input.checkbox__input(
+                  id='makita'
+                  type='checkbox'
+                  checked
+                )
+                label.catalog__filters-selection.checkbox__label(
+                  for='makita'
+                )
                   | Makita
               .checkbox
-                input.checkbox__input(type='checkbox', id='dewalt')
-                label.catalog__filters-selection.checkbox__label(for='dewalt')
+                input.checkbox__input(
+                  id='dewalt'
+                  type='checkbox'
+                )
+                label.catalog__filters-selection.checkbox__label(
+                  for='dewalt'
+                )
                   | Dewalt
               .checkbox
-                input.checkbox__input(type='checkbox', id='hitachi')
-                label.catalog__filters-selection.checkbox__label(for='hitachi')
+                input.checkbox__input(
+                  id='hitachi'
+                  type='checkbox'
+                )
+                label.catalog__filters-selection.checkbox__label(
+                  for='hitachi'
+                )
                   | Hitachi
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Питание:
-            div
+            .catalog__filters-inner
               .radiobox
-                input.radiobox__input(type='radio', id='cordless', name='power', checked)
-                label.catalog__filters-selection.radiobox__label(for='cordless')
+                input.radiobox__input(
+                  id='cordless'
+                  type='radio'
+                  name='power'
+                  checked
+                )
+                label.catalog__filters-selection.radiobox__label(
+                  for='cordless'
+                )
                   span
                     | Аккумуляторные
               .radiobox
-                input.radiobox__input(type='radio', id='сorded', name='power')
-                label.catalog__filters-selection.radiobox__label(for='сorded')
+                input.radiobox__input(
+                  id='сorded'
+                  type='radio'
+                  name='power'
+                )
+                label.catalog__filters-selection.radiobox__label(
+                  for='сorded'
+                )
                   span
                     | Сетевые
           button.catalog__filters-btn.btn.btn--white(type='submit')
@@ -167,7 +211,7 @@ html(lang='ru')
                 | Сортировка:
               ul.catalog__sort-items
                 li.catalog__sort-item.catalog__sort-item--active
-                  button.catalog__sort-btn(type='button', disabled)
+                  button.catalog__sort-btn(type='button' disabled)
                     | По цене
                 li.catalog__sort-item
                   button.catalog__sort-btn(type='button')
@@ -176,11 +220,16 @@ html(lang='ru')
                   button.catalog__sort-btn(type='button')
                     | По функционалу
                 li.catalog__sort-item
-                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(type='button', disabled)
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--up(
+                    type='button'
+                    disabled
+                  )
                     span
                       | Обратный порядок
                 li.catalog__sort-item.catalog__sort-item--active
-                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(type='button')
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn--down(
+                    type='button'
+                  )
                     span
                       | Прямой порядок
           .catalog__items
@@ -191,7 +240,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 3000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 3000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -207,7 +261,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-3.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 6000')
+                img(
+                  src='img/product-3.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 6000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -226,7 +285,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 2000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 2000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -240,7 +304,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 3000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 3000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -259,7 +328,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-3.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 6000')
+                img(
+                  src='img/product-3.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 6000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -275,7 +349,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 2000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 2000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -292,7 +371,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 3000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 3000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -308,7 +392,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-3.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 6000')
+                img(
+                  src='img/product-3.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 6000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -324,7 +413,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 2000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 2000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -334,7 +428,10 @@ html(lang='ru')
           .catalog__nav
             ul.catalog__nav-items
               li.catalog__nav-item.catalog__nav-item--active
-                button.catalog__nav-btn.btn.btn--white(type='button', disabled)
+                button.catalog__nav-btn.btn.btn--white(
+                  type='button'
+                  disabled
+                )
                   | 1
               li.catalog__nav-item
                 button.catalog__nav-btn.btn.btn--white(type='button')
@@ -349,7 +446,13 @@ html(lang='ru')
           h2.catalog__info-title
             | Пара слов о перфораторах
           p.catalog__info-description
-            | Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            | Перфоратор — универсальный строительный инструмент.
+            | Предназначен для сверления и долбления отверстий в кирпиче,
+            | бетоне и камне. Существуют электромеханические и пневматические
+            | перфораторы. Современные модели могут выполнять функции дрели,
+            | шуруповерта и отбойного молотка. В ассортиментном ряду есть
+            | выбор «трехрежимников»: в одном устройстве будут совмещены
+            | отбойный молоток и ударная дрель.
       .catalog__cart-popup.cart-popup.modal
         .cart-popup__inner.modal__inner
           span.cart-popup__desc

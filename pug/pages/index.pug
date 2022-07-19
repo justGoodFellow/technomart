@@ -1,6 +1,7 @@
 doctype html
 html(lang='ru')
   include ../layouts/head.pug
+
   body
     header.page-header
       .page-header__top
@@ -9,11 +10,11 @@ html(lang='ru')
             | Техномарт
           .page-header__top-menu.header-menu
             form.header-menu__item.header-menu__item--search.search-field
-              input(type='search', placeholder='Поиск')
+              input(type='search' placeholder='Поиск')
               button.search-field__submit(type='submit')
                 span
                   | Поиск
-                svg(width='17', height='17')
+                svg(width='17' height='17')
                   use(xlink:href='img/symbols.svg#icon-search')
             a.header-menu__item.header-menu__item--bookmarks(href='#')
               | Закладки:&nbsp;
@@ -28,7 +29,8 @@ html(lang='ru')
       .page-header__middle
         .page-header__middle-wrap
           p.page-header__description
-            | Интернет-магазин строительных материалов и инструментов для ремонта
+            | Интернет-магазин строительных материалов и инструментов для
+            | ремонта
           address.page-header__contacts
             a.page-header__contacts-phone(href='tel:+78125550555')
               | +7 (812) 555-05-55
@@ -37,7 +39,7 @@ html(lang='ru')
           .page-header__user.user
             .user__links
               a.user__link.user__link-login(href='#')
-                svg(width='20', height='17')
+                svg(width='20' height='17')
                   use(xlink:href='img/symbols.svg#icon-login')
                 | Войти
               a.user__link(href='#')
@@ -66,78 +68,8 @@ html(lang='ru')
               a.main-nav__link(href='#')
                 | Контакты
     main
-      section.promo
-        .promo__wrapper
-          h2.visually-hidden
-            | Главное
-          .promo__items
-            .promo__item.promo__item--materials
-              span.flag-new
-                span
-                  | Новинка
-              .promo__item-inner
-                h3.promo__item-title
-                  | Материалы
-                a.promo__item-link.btn.btn--transparent(href='#')
-                  | На любой вкус
-            .promo__item.promo__item--tools
-              .promo__item-inner
-                h3.promo__item-title
-                  | Инструменты
-                a.promo__item-link.btn.btn--transparent(href='#')
-                  | На все случаи
-            .promo__item.promo__item--technics
-              .promo__item-inner
-                h3.promo__item-title
-                  | Техника
-                a.promo__item-link.btn.btn--transparent(href='#')
-                  | Для стройки
-            .promo__item.promo__item--big.promo__slider.slider-promo
-              .slider-promo__slide.slider-promo__slide--punchers.slider-promo__slide--active
-                h3.slider-promo__title
-                  | Перфораторы
-                p.slider-promo__description
-                  | Настоящие мужские игрушки
-                a.slider-promo__link.btn(href='catalog.html')
-                  | Открыть каталог
-              .slider-promo__slide.slider-promo__slide--drills
-                h3.slider-promo__title
-                  | Дрели
-                p.slider-promo__description
-                  | Соседям на радость!
-                a.slider-promo__link.btn(href='catalog.html')
-                  | Открыть каталог
-              .slider-promo__arrows
-                button.slider-promo__arrow.slider-promo__arrow--left(type='button', disabled)
-                  span
-                    | Предыдущий
-                button.slider-promo__arrow.slider-promo__arrow--right(type='button')
-                  span
-                    | Следующий
-              .slider-promo__breadcrumb
-                button.slider-promo__breadcrumb-item(type='button', disabled)
-                  span
-                    | 1
-                button.slider-promo__breadcrumb-item(type='button')
-                  span
-                    | 2
-            .promo__item.promo__item--discounts
-              .promo__item-inner
-                h3.promo__item-title
-                  | Скидки 50%
-                a.promo__item-link.btn.btn--transparent(href='#')
-                  | На
-                  |
-                  span
-                    | 350
-                  |
-                  | товаров
-            .promo__item.promo__item--delivery
-              .promo__item-inner
-                h3.promo__item-title
-                  | Доставка
-                a.promo__item-link.btn.btn--transparent(href='#')
-                  | Бесплатно
+      include ../components/promo.pug
+
       section.popular
         .popular__wrapper
           .popular__header
@@ -148,7 +80,12 @@ html(lang='ru')
           .popular__items
             .popular__item.product
               .product__img-wrap
-                img(src='img/product-1.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 9000')
+                img(
+                  src='img/product-1.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 9000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -169,7 +106,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 3000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 3000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -185,7 +127,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-3.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 6000')
+                img(
+                  src='img/product-3.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 6000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -204,7 +151,12 @@ html(lang='ru')
                 a.product__bookmark(href='#')
                   | В закладки
               .product__img-wrap
-                img(src='img/product-2.jpg', width='218', height='169', alt='Перфоратор BOSCH BFG 2000')
+                img(
+                  src='img/product-2.jpg'
+                  width='218'
+                  height='169'
+                  alt='Перфоратор BOSCH BFG 2000'
+                )
               .product__inner
                 a.product__title(href='#')
                   h3
@@ -220,112 +172,62 @@ html(lang='ru')
               | Все производители
           .popular__items
             a.popular__item.brand(href='#')
-              img(src='img/logo-bosch.png', width='122', height='32', alt='Bosch')
+              img(
+                src='img/logo-bosch.png'
+                width='122'
+                height='32'
+                alt='Bosch'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-makita.png', width='123', height='40', alt='Makita')
+              img(
+                src='img/logo-makita.png'
+                width='123'
+                height='40'
+                alt='Makita'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-dewalt.png', width='146', height='44', alt='DeWALT')
+              img(
+                src='img/logo-dewalt.png'
+                width='146'
+                height='44'
+                alt='DeWALT'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-interskol.png', width='184', height='32', alt='Интерскол')
+              img(
+                src='img/logo-interskol.png'
+                width='184'
+                height='32'
+                alt='Интерскол'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-hitachi.png', width='143', height='22', alt='Hitachi')
+              img(
+                src='img/logo-hitachi.png'
+                width='143'
+                height='22'
+                alt='Hitachi'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-lg.png', width='121', height='73', alt='LG')
+              img(
+                src='img/logo-lg.png'
+                width='121'
+                height='73'
+                alt='LG'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-aeg.png', width='151', height='96', alt='AEG')
+              img(
+                src='img/logo-aeg.png'
+                width='151'
+                height='96'
+                alt='AEG'
+              )
             a.popular__item.brand(href='#')
-              img(src='img/logo-metabo.png', width='155', height='55', alt='Metabo')
-      section.services
-        .services__wrapper
-          h2.services__title
-            | Сервисы
-          p.services__description
-            | Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          .services__slider
-            .services__controls
-              button.services__control-btn.services__control-btn--active(type='button', disabled)
-                | Доставка
-              button.services__control-btn(type='button')
-                | Гарантия
-              button.services__control-btn(type='button')
-                | Кредит
-            .services__slides
-              .services__slide.services__slide--active
-                h3.services__slide-title
-                  | Доставка
-                p.services__slide-description
-                  | Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-              .services__slide
-                h3.services__slide-title
-                  | Гарантия
-                p.services__slide-description
-                  | Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-              .services__slide
-                h3.services__slide-title
-                  | Кредит
-                p.services__slide-description
-                  | Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь
-                a.services__slide-btn.btn(href='#')
-                  | Отправить заявку
-      .info
-        .info__wrapper
-          section.info__company
-            h2.info__title
-              | Компания «Техномарт»
-            p.info__description.info__company-desc
-              | Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-            p.info__description.info__company-desc
-              | Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
-            ul.info__items
-              li.info__item
-                | Деловые линии
-              li.info__item
-                | Автотрейдинг
-              li.info__item
-                | ЖелДорЭкспедиция
-            a.info__company-more.btn(href='#')
-              | Подробнее о компании
-          section.info__contacts
-            h2.info__title
-              | Контакты
-            p.info__description
-              | Вы можете забрать товар сами,
-              br
-              | заехав в наш офис:
-            a.info__contacts-map(href='#')
-              img(src='img/map.jpg', width='300', height='158', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
-            a.info__feedback-open.btn.btn--fluid(href='#')
-              | Заблудились? Напишите нам!
-        .info__modal-map.map
-          .map__wrapper
-            img(src='img/map--big.jpg', width='940', height='446', alt='г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8')
-            iframe(src='https://yandex.ru/map-widget/v1/-/CBUZNWQH3D' width='940' height='446')
-          button.map__close.modal__close(type='button')
-            span
-              | Закрыть
-        .info__modal-feedback.feedback.modal
-          form.feedback__form(action='#')
-            .feedback__items.modal__inner
-              .feedback__item-group
-                .feedback__item
-                  label.feedback__label(for='name')
-                    | Ваше имя:
-                  input.feedback__field(id='name', name='name' placeholder='Представьтесь, пожалуйста')
-                .feedback__item
-                  label.feedback__label(for='email')
-                    | Ваш e-mail:
-                  input.feedback__field(id='email', type='email', name='email', placeholder='Для отправки ответа')
-              .feedback__item
-                label.feedback__label(for='text')
-                  | Текст письма:
-                textarea.feedback__field(id='text', name='text', placeholder='В свободной форме')
-            .feedback__footer.modal__footer
-              button.feedback__send.btn.btn--fluid(type='submit')
-                | Отправить
-          button.feedback__close.modal__close(type='button')
-            span
-              | Закрыть
-        .modal__overlay
-
+              img(
+                src='img/logo-metabo.png'
+                width='155'
+                height='55'
+                alt='Metabo'
+              )
+      include ../components/services.pug
+      include ../components/info.pug
     include ../layouts/footer.pug
     script(src='js/concatenated.js')
