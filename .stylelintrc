@@ -1,6 +1,10 @@
 {
   "extends": "stylelint-config-htmlacademy",
   "rules": {
+    "color-named": "always-where-possible",
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "max-nesting-depth": [2, {"ignore": ["pseudo-classes"]}],
     "string-quotes": "single"
   }
 }

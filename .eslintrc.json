@@ -3,6 +3,7 @@
     "browser": true
   },
   "extends": "htmlacademy/es5",
+  "ignorePatterns": ["js/svg4everybody.js"],
   "rules": {
     // Additional rules...
   }
