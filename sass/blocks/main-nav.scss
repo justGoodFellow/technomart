@@ -1,0 +1,38 @@
+.main-nav {
+  @include container;
+}
+
+.main-nav__items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  flex-grow: 1;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 17px 25px;
+
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+
+  background-color: $color-main--light;
+  border-bottom: 5px solid $color-main;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+  }
+
+  &:active {
+    color: rgba(white, 0.5);
+  }
+}

@@ -1,0 +1,161 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.user__links {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.user__link {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  padding: 10px 25px;
+
+  font-size: 21px;
+  color: black;
+  text-decoration: none;
+
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    color: $red;
+
+    outline: none;
+
+    svg {
+      fill: $color-main--light;
+    }
+  }
+
+  &:active {
+    color: rgba(black, 0.3);
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  &--logged {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 13px;
+
+    svg {
+      opacity: 0.3;
+    }
+
+    .icon-user {
+      margin-right: 13px;
+    }
+
+    &:hover,
+    &:focus {
+      color: black;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: rgba(black, 0.3);
+
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.user__link-login {
+  padding-left: 10px;
+
+  svg {
+    margin-right: 14px;
+
+    fill: $gray--darken;
+  }
+}
+
+.user__log-out {
+  display: flex;
+  margin-left: auto;
+  padding: 14px;
+
+  font: inherit;
+
+  background: none;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    margin: auto;
+
+    opacity: 0.3;
+
+    fill: $color-main--light;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  span {
+    @include visually-hidden;
+  }
+}
+
+.user__menu {
+  display: flex;
+  margin: 10px 0;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.user__menu-item {
+  margin-right: 30px;
+
+  color: $color-main--light;
+
+  &:first-child {
+    list-style: none;
+  }
+}
+
+.user__menu-link {
+  color: $color-main--light;
+
+  &:hover,
+  &:focus {
+    color: $red;
+
+    outline: none;
+  }
+
+  &:active {
+    color: $color-main--light;
+
+    opacity: 0.3;
+  }
+}

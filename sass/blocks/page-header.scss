@@ -33,10 +33,6 @@
     background-color: $color-main--dark;
     outline: none;
 
-    input {
-      background-color: $color-main--dark;
-    }
-
     &::before {
       opacity: 1;
     }
@@ -140,50 +136,56 @@
       opacity: 0.5;
     }
   }
+}
 
-  input {
-    width: 100%;
-    height: 100%;
-    padding: 0;
+.search-field__field {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 
-    font: inherit;
-    line-height: 48px;
-    color: white;
+  font: inherit;
+  line-height: 48px;
+  color: white;
 
-    background-color: $color-main;
-    border: 0;
-    border-radius: 0;
-    outline: 0;
+  background-color: $color-main;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
 
-    appearance: none;
+  appearance: none;
 
-    &:focus {
-      color: black;
+  &:focus {
+    color: black;
 
-      background-color: white;
-
-      &::placeholder {
-        color: black;
-      }
-
-      & + button {
-        background-color: white;
-
-        svg {
-          opacity: 1;
-
-          fill: $red;
-        }
-      }
-    }
+    background-color: white;
 
     &::placeholder {
-      color: white;
+      color: black;
     }
 
-    &::-ms-clear {
-      display: none;
+    & + button {
+      background-color: white;
+
+      svg {
+        opacity: 1;
+
+        fill: $red;
+      }
     }
+  }
+
+  &::placeholder {
+    color: white;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+.header-menu__item:hover {
+  .search-field__field:not(:focus) {
+    background-color: $color-main--dark;
   }
 }
 
@@ -222,7 +224,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 82px;
+  min-height: 85px;
   margin-bottom: 31px;
   padding-top: 45px;
 }
@@ -278,205 +280,4 @@
 
   font-size: 14px;
   color: $color-main--light;
-}
-
-.user {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.user__links {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.user__link {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  padding: 10px 25px;
-
-  font-size: 21px;
-  color: black;
-  text-decoration: none;
-
-  background-color: white;
-
-  &:hover,
-  &:focus {
-    color: $red;
-
-    outline: none;
-
-    svg {
-      fill: $color-main--light;
-    }
-  }
-
-  &:active {
-    color: rgba(black, 0.3);
-
-    svg {
-      opacity: 0.3;
-    }
-  }
-
-  &--logged {
-    display: flex;
-    flex-grow: 1;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 13px;
-
-    svg {
-      opacity: 0.3;
-    }
-
-    .icon-user {
-      margin-right: 13px;
-    }
-
-    &:hover,
-    &:focus {
-      color: black;
-
-      svg {
-        opacity: 1;
-      }
-    }
-
-    &:active {
-      color: rgba(black, 0.3);
-
-      svg {
-        opacity: 0.3;
-      }
-    }
-  }
-}
-
-.user__link-login {
-  padding-left: 10px;
-
-  svg {
-    margin-right: 14px;
-
-    fill: $gray--darken;
-  }
-}
-
-.user__log-out {
-  display: flex;
-  margin-left: auto;
-  padding: 14px;
-
-  font: inherit;
-
-  background: none;
-  background-color: white;
-  border: none;
-  cursor: pointer;
-
-  svg {
-    display: block;
-    margin: auto;
-
-    opacity: 0.3;
-
-    fill: $color-main--light;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-
-    svg {
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    svg {
-      opacity: 0.3;
-    }
-  }
-
-  span {
-    @include visually-hidden;
-  }
-}
-
-.user__menu {
-  display: flex;
-  margin: 10px 0;
-  margin-left: 20px;
-  padding: 0;
-}
-
-.user__menu-item {
-  margin-right: 30px;
-
-  color: $color-main--light;
-
-  &:first-child {
-    list-style: none;
-  }
-}
-
-.user__menu-link {
-  color: $color-main--light;
-
-  &:hover,
-  &:focus {
-    color: $red;
-
-    outline: none;
-  }
-
-  &:active {
-    color: $color-main--light;
-
-    opacity: 0.3;
-  }
-}
-
-.main-nav {
-  @include container;
-}
-
-.main-nav__items {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-
-  list-style: none;
-}
-
-.main-nav__item {
-  flex-grow: 1;
-}
-
-.main-nav__link {
-  display: block;
-  padding: 17px 25px;
-
-  font-size: 17px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-
-  background-color: $color-main--light;
-  border-bottom: 5px solid $color-main;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    background-color: $color-main;
-  }
-
-  &:active {
-    color: rgba(white, 0.5);
-  }
 }

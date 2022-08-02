@@ -10,7 +10,7 @@ html(lang='ru')
             | Техномарт
           .page-header__top-menu.header-menu
             form.header-menu__item.header-menu__item--search.search-field
-              input(type='search' placeholder='Поиск')
+              input.search-field__field(type='search' placeholder='Поиск')
               button.search-field__submit(type='submit')
                 span
                   | Поиск
@@ -128,50 +128,50 @@ html(lang='ru')
             legend.catalog__filters-title
               | Производители:
             .catalog__filters-inner
-              .checkbox
-                input.checkbox__input(
+              .inputbox.inputbox--checkbox
+                input.inputbox__input(
                   id='bosch'
                   type='checkbox'
                   checked
                 )
-                label.catalog__filters-selection.checkbox__label(
+                label.inputbox__label(
                   for='bosch'
                 )
                   | Bosch
-              .checkbox
-                input.checkbox__input(
+              .inputbox.inputbox--checkbox
+                input.inputbox__input(
                   id='interskol'
                   type='checkbox'
                 )
-                label.catalog__filters-selection.checkbox__label(
+                label.inputbox__label(
                   for='interskol'
                 )
                   | Интрескол
-              .checkbox
-                input.checkbox__input(
+              .inputbox.inputbox--checkbox
+                input.inputbox__input(
                   id='makita'
                   type='checkbox'
                   checked
                 )
-                label.catalog__filters-selection.checkbox__label(
+                label.inputbox__label(
                   for='makita'
                 )
                   | Makita
-              .checkbox
-                input.checkbox__input(
+              .inputbox.inputbox--checkbox
+                input.inputbox__input(
                   id='dewalt'
                   type='checkbox'
                 )
-                label.catalog__filters-selection.checkbox__label(
+                label.inputbox__label(
                   for='dewalt'
                 )
                   | Dewalt
-              .checkbox
-                input.checkbox__input(
+              .inputbox.inputbox--checkbox
+                input.inputbox__input(
                   id='hitachi'
                   type='checkbox'
                 )
-                label.catalog__filters-selection.checkbox__label(
+                label.inputbox__label(
                   for='hitachi'
                 )
                   | Hitachi
@@ -179,25 +179,25 @@ html(lang='ru')
             legend.catalog__filters-title
               | Питание:
             .catalog__filters-inner
-              .radiobox
-                input.radiobox__input(
+              .inputbox.inputbox--radio
+                input.inputbox__input(
                   id='cordless'
                   type='radio'
                   name='power'
                   checked
                 )
-                label.catalog__filters-selection.radiobox__label(
+                label.inputbox__label(
                   for='cordless'
                 )
                   span
                     | Аккумуляторные
-              .radiobox
-                input.radiobox__input(
+              .inputbox.inputbox--radio
+                input.inputbox__input(
                   id='сorded'
                   type='radio'
                   name='power'
                 )
-                label.catalog__filters-selection.radiobox__label(
+                label.inputbox__label(
                   for='сorded'
                 )
                   span
